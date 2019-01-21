@@ -34,6 +34,7 @@ def reformat_languages(languages)
       elsif style_key == :functional && lang_key == hash_key
         new_hash[:style] = [style_key]
       end
+    end
   end
 
   new_hash
