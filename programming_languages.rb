@@ -35,7 +35,7 @@ def reformat_languages(languages)
       end
     end
 
-  end
+  end #end of languages.each iteration
 
   new_hash
   binding.pry
