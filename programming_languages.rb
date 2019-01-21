@@ -28,9 +28,9 @@ def reformat_languages(languages)
     end
     binding.pry
     new_hash.each do |hash_key, hash_value|
-      if style_key == :oo && lang_key == hash_key
+      if style_key == :oo && lang_val.keys.include? hash_key
         hash_value[:style] = [style_key]
-      elsif style_key == :functional && lang_key == hash_key
+      elsif style_key == :functional && lang_val.keys.include? hash_key
         hash_value[:style] = [style_key]
       end
 
