@@ -28,9 +28,8 @@ def reformat_languages(languages)
     end
 
     new_hash.each do |hash_key, hash_value|
-      hash_value[:style] = []
       if (style_key == :oo && lang_val.keys.include?(hash_key))
-        hash_value[:style] << style_key
+        hash_value[:style] = [] << style_key
       elsif (style_key == :functional && lang_val.keys.include?(hash_key))
         hash_value[:style] << style_key
       end #end of if/else
