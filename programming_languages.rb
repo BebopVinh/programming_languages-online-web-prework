@@ -27,10 +27,11 @@ def reformat_languages(languages)
       new_hash[lang_key] = lang_attr
     end
     binding.pry
+    new_hash.each do |hash_key, hash_value|
       if style_key == :oo && lang_key == hash_key
-        new_hash[:style] = [style_key]
+        hash_value[:style] = [style_key]
       elsif style_key == :functional && lang_key == hash_key
-        new_hash[:style] = [style_key]
+        hash_value[:style] = [style_key]
       end
 
   end
